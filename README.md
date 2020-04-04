@@ -26,5 +26,5 @@ The export function, defined midway through the source code, takes a song entry 
     * If all versions have identical lyrics, export only one.
     * If not all versions have identical lyrics, export each differing version under the same title (so that they show up side-by-side when sorted alphabetically).
     * If there are no matches, simply export the one version of the song.
-    
+
  Often, one version of a song does not have any author information while another one does.  Thus, whichever versions of a song are going to be exported are first updated with the conglomerate author information from all available sources.
