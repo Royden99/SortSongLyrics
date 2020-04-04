@@ -22,7 +22,6 @@ The export function, defined midway through the source code, takes a song entry 
  In order to complete that objective, the script loops through one of the lists, comparing every song to all the songs in the other lists.  When the end of the first list is reached, the same process is performed on the remaining two lists; the script loops through one of them, comparing every song to all the songs in the other.  Finally, any remaining songs in the last list are exported.  The indexes of songs that have been matched are logged, and those songs are not processed in future iterations.  
  To compare songs, the Python module "fuzzywuzzy" is used as explained [here](https://www.datacamp.com/community/tutorials/fuzzy-string-python "Fuzzy String Matching in Python").  Very simply, the included function `token_sort_ratio(string1, string2)` returns a number indicating how similar the two strings are.  If the result of two songs is 70 or greater, it is counted as a match; if the result is 100, then the two versions are counted as identical.  Also, if more than one match is found in the same list, then the match with the highest result is used.  
  When the script has finished looking for matches to a song, the following logic is used:
-    
   * If all versions have identical lyrics, export only one.
   * If not all versions have identical lyrics, export each differing version under the same title (so that they show up side-by-side when sorted alphabetically).
   * If there are no matches, simply export the one version of the song.
